@@ -51,7 +51,7 @@
             
                 <p class="w-100 mx-3">都道府県<font size="-2" color="violet"> *手動での選択も可能です。</font></p>
             
-                <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto" required>
+                <select id="address1" name="address1" class="form-control p-region-id w-75 mx-auto">
                 
                     <div class="invalid-feedback">必須入力です。</div>
                 
@@ -154,7 +154,7 @@
             
             <!--test-->
             <div class="form-floating">
-                <input class="form-control form-control-lg" id="billingamount" name="billingamount" type="number" maxlength="10" placeholder="00000円" required>
+                <input class="form-control form-control-lg" id="billingamount" name="billingamount" type="number" maxlength="10" placeholder="00000円">
                 <label for="billingamount">
                     <font size="-1" color="gray">ご請求予定金額</font>
                     <font size="-2" color="gray">(円)を入力</font>
@@ -170,7 +170,7 @@
             <input class="form-control w-75 mx-auto" id="basiccharge" name="basiccharge" type="number" maxlength="10" placeholder="00000">
             <br>
             <p class="w-100 mx-3">今回ご使用量(㎥)</p>
-            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" placeholder="00000" required>
+            <input class="form-control w-75 mx-auto" id="quantity" name="quantity" type="number" maxlength="10" placeholder="00000">
             <div class="invalid-feedback">必須入力です。</div>
             <br>
             <p class="w-100 mx-3">ガス料金単価(円)</p>
@@ -181,100 +181,6 @@
         </div>
         
         
-        <!--練習エリア開始-->
-
-        <!--
-        
-        <p class="mt-3">文字入力テスト</p>
-        <div id="form-text1">
-            <input class="form-control w-100 mt-1" name="text1" maxlength="10">
-        </div>
-
-        
-        <p class="mt-3">選択肢テスト</p>
-        <div id="form-select1">
-            <select class="form-control w-100 mt-1" name="select1" maxlength="10">
-                <option>Select A</option>
-                <option>Select B</option>
-            </select>
-        </div>
-        
-        <!--練習エリア終了-->        
-        
-        <!--練習エリア2開始-->
-
-        <!--
-        <p class="mt-3">バリデーションテスト(入力必須)</p>
-        <div class="input-group">
-            <input class="form-control" name="text10" maxlength="10" placeholder="Name" required>
-            <div class="invalid-feedback">Please enter your name.</div>
-        </div>
-        
-        
-        <!--頻繁に登場する「対象要素.addEventListener( 種類, 関数, false )」は、JavaScriptからさまざまなイベント処理を実行する。-->
-        <!--「種類」の意味はそれぞれ以下-->
-        <!--load:「Webページの読み込みが完了した時に発動（画像などのリソースすべて含む）」-->
-        <!--submit:「フォームのsubmitボタンを押したときに発動」-->
-        <!--DOMContentLoaded:Webページが読み込みが完了した時に発動（画像などのリソースは含まない）-->
-        <!--https://www.sejuku.net/blog/57625-->
-        
-        <!--
-        <script>
-            (function() {
-                window.addEventListener('load', function() { 
-                <!--    var forms = document.getElementsByClassName('needs-validation');
-                    var forms = document.getElementsByClassName('w-75 mx-auto');  
-                    var validation = Array.prototype.filter.call(forms,function(form) {
-                        form.addEventListener('submit', function(event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault(); 
-                                event.stopPropagation(); 
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                }, false);
-            })();
-        </script>
-        
-        <!--練習エリア2終了-->
-        
-        
-
-        <!--
-        <p class="mt-3">ご希望の日付</p>
-        <div>
-            <input class="form-control" name="date" maxlength="10">
-        </div>
-
-        <p class="mt-3">人数</p>
-        <div id="form-number" class="btn-group btn-group-toggle w-100" data-toggle="buttons">
-            <label class="btn btn-secondary">
-                <input type="radio" name="number" value="1" autocomplete="off">1
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="number" value="2" autocomplete="off">2
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="number" value="3" autocomplete="off">3
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="number" value="4" autocomplete="off">4
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="number" value="5" autocomplete="off">5
-            </label>
-        </div>
-
-        <p class="mt-3">氏名</p>
-        <div id="form-name">
-            <input class="form-control w-100 mt-1" name="name" maxlength="10">
-        </div>
-
-        
-        
-        
-        -->        
         
         
         
