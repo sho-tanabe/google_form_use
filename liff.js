@@ -62,33 +62,33 @@ function sendText(text) {
 }
 
 // LINEトーク画面上でメッセージ送信→2通同時テスト成功のため、メッセージ2通目を動的に代入するテストが成功するまで、コメントアウトのままとしている。
-function sendMessages(text) {
-    liff.sendMessages([{
-        'type': 'text',
-        'text': text
-    }]).then(function () {
-        liff.closeWindow();
-    }).catch(function (error) {
-        window.alert('Failed to send message ' + error);
-    });
-}
-
-
-//2通同時に送れるかテスト→テスト結果：同時送信成功！！コメントアウトのままとしている。
-// LINEトーク画面上でメッセージ送信
 //function sendMessages(text) {
 //    liff.sendMessages([{
 //        'type': 'text',
 //        'text': text
-//    },{
-//        'type': 'text',
-//        'text': "2通同時に送れるかテスト"
 //    }]).then(function () {
 //        liff.closeWindow();
 //    }).catch(function (error) {
 //        window.alert('Failed to send message ' + error);
 //    });
 //}
+
+
+//2通同時に送れるかテスト→テスト結果：同時送信成功！！コメントアウトのままとしている。
+// LINEトーク画面上でメッセージ送信
+function sendMessages(text) {
+    liff.sendMessages([{
+        'type': 'text',
+        'text': text
+    },{
+        'type': 'text',
+        'text': "見積もり申し込み"
+    }]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
 //2通同時に送れるかテスト
 
 
