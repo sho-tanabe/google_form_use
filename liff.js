@@ -41,10 +41,6 @@ function sendText(text) {
 
         shareTargetPicker(text);
 
-//GoogleForm送信機能を動かすために必要なのか？開始    
-        document.googleform1.submit();
-//GoogleForm送信機能を動かすために必要なのか？終了 
-
 //        alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
@@ -100,6 +96,11 @@ function shareTargetPicker(text) {
     }]).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
+    
+    //GoogleForm送信機能を動かすために必要なのか？開始    
+    document.googleform1.submit();
+    //GoogleForm送信機能を動かすために必要なのか？終了 
+    
 }
 
 
