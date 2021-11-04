@@ -57,7 +57,7 @@ $(function () {
         //住所項目
         var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
         //var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
-        var address1 = $('[name="entry.796315175"] option:selected').val();//区分値に紐づく表示項目が表示される。
+        var address1 = $('[name="entry.796315175"] option:selected').text();//区分値に紐づく表示項目が表示される。
         var address2 = $('input[name="address2"]').val();
         var address3 = $('input[name="address3"]').val();
         
