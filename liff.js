@@ -39,9 +39,9 @@ function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
 
-        shareTargetPicker(text);
+//        shareTargetPicker(text);
 
-//        alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
+        alert('本画面をLINEアプリ以外で起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
 
@@ -98,7 +98,7 @@ function shareTargetPicker(text) {
     });
     
     //GoogleForm送信機能を動かすために必要なのか？開始    
-    document.googleform1.submit();
+    //document.googleform1.submit();
     //GoogleForm送信機能を動かすために必要なのか？終了 
     
 }
