@@ -48,10 +48,6 @@ function sendText(text) {
 //GoogleForm送信機能を動かすために必要なのか？開始    
         document.googleform1.submit();
 //GoogleForm送信機能を動かすために必要なのか？終了 
-
-//たまに送信失敗することがあるので、その対策として2回送付を試みる。ダメかもしれないが・・開始
-        document.googleform1.submit();
-//たまに送信失敗することがあるので、その対策として2回送付を試みる。ダメかもしれないが・・終了
         
         sendMessages(text);
 //        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。→成功！!数日ごも維持できているか確認する。→3回目フリーズ再発。再度コメントアウト
