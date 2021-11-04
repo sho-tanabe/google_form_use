@@ -63,7 +63,7 @@ $(function () {
         
         
         //計算要素項目
-//        var billingamount = $('input[name="billingamount"]').val();
+        var billingamount = $('input[name="billingamount"]').val();
         var basiccharge = $('input[name="basiccharge"]').val();
         var quantity = $('input[name="quantity"]').val();
         var unitprice = $('[name="unitprice"]').val();
