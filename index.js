@@ -60,11 +60,16 @@ $(function () {
         var address2 = $('input[name="address2"]').val();
         var address3 = $('input[name="address3"]').val();
         
+        
+        
         //計算要素項目
-        var billingamount = $('input[name="billingamount"]').val();
+//        var billingamount = $('input[name="billingamount"]').val();
         var basiccharge = $('input[name="basiccharge"]').val();
         var quantity = $('input[name="quantity"]').val();
         var unitprice = $('[name="unitprice"]').val();
+        
+        var nametest = $('input[name="entry.2144812415"]').val();
+        
 
         //算出結果
         var difference = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
@@ -85,7 +90,7 @@ $(function () {
                 }
         
         if ( 7 >= address1num || address1num >= 15 ){
-            var msg = `【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n対象外地域のため判定できません。`;
+            var msg = `【現在お住まいの地域】\nGoogleFormTest:${nametest}【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n対象外地域のため判定できません。`;
         } else {
             var msg = `【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
         }
@@ -109,7 +114,7 @@ $(function () {
         sendText2(msg2);
         
 //Gmail送信後にフリーズする奴の解決なるか!？開始
-        sendautomail(msg);
+//        sendautomail(msg);
 //Gmail送信後にフリーズする奴の解決なるか!？終了
         
         
