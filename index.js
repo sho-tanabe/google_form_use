@@ -38,7 +38,7 @@ $(function () {
 ////googleformに回答が送信されないため、一次コメントアウト    開始
     
     // 送信
-//    $('form').submit(function () {
+    $('form').submit(function () {
 
         //練習エリア開始
 //        var text1 = $('input[name="text1"]').val();
@@ -55,71 +55,76 @@ $(function () {
         //練習エリア終了
         
         //住所項目
-//        var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
-//        var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
-//        var address2 = $('input[name="address2"]').val();
-//        var address3 = $('input[name="address3"]').val();
+        var address1num = $('[name="address1"] option:selected').val();//番号が表示される。後続の判定用。
+        var address1 = $('[name="address1"] option:selected').text();//区分値に紐づく表示項目が表示される。
+        var address2 = $('input[name="address2"]').val();
+        var address3 = $('input[name="address3"]').val();
         
         
         
         //計算要素項目
-//        var billingamount = $('input[name="billingamount"]').val();
-//        var basiccharge = $('input[name="basiccharge"]').val();
-//        var quantity = $('input[name="quantity"]').val();
-//        var unitprice = $('[name="unitprice"]').val();
+        var billingamount = $('input[name="billingamount"]').val();
+        var basiccharge = $('input[name="basiccharge"]').val();
+        var quantity = $('input[name="quantity"]').val();
+        var unitprice = $('[name="unitprice"]').val();
         
-//        var nametest = $('input[name="entry.2144812415"]').val();
+        var nametest = $('input[name="entry.2144812415"]').val();
         
 
         //算出結果
-//        var difference = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
-//        var resultround = Math.floor(difference);
+        var difference = ( $('#billingamount').val() - $('#basiccharge').val() ) / $('#quantity').val();
+        var resultround = Math.floor(difference);
         
         //コスト削減予定額
-//        var costcut = (resultround - 280) * $('#quantity').val();
+        var costcut = (resultround - 280) * $('#quantity').val();
 
         //コスト削減予定額（LINEトーク送信用）
-//        if (costcut < 1000){
-//            var costcutmsg = `判定結果をご確認ください(${costcut})`;
-//        }　else if (costcut < 10000){
-//            var costcutfloor = Math.floor(costcut / 100) * 100;
-//            var costcutmsg = `約${costcutfloor}円程度`;
-//            } else {
-//                var costcutfloor = Math.floor(costcut / 1000) * 1000;
-//                var costcutmsg = `約${costcutfloor}円程度`;
-//                }
+        if (costcut < 1000){
+            var costcutmsg = `判定結果をご確認ください(${costcut})`;
+        }　else if (costcut < 10000){
+            var costcutfloor = Math.floor(costcut / 100) * 100;
+            var costcutmsg = `約${costcutfloor}円程度`;
+            } else {
+                var costcutfloor = Math.floor(costcut / 1000) * 1000;
+                var costcutmsg = `約${costcutfloor}円程度`;
+                }
         
-//        if ( 7 >= address1num || address1num >= 15 ){
-//            var msg = `【現在お住まいの地域】\nGoogleFormTest:${nametest}【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n対象外地域のため判定できません。`;
-//        } else {
-//            var msg = `【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
-//        }
+        if ( 7 >= address1num || address1num >= 15 ){
+            var msg = `【現在お住まいの地域】\nGoogleFormTest:${nametest}【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n対象外地域のため判定できません。`;
+        } else {
+            var msg = `【現在お住まいの地域】\n都道府県:${address1}\n市区町村:${address2}\n町・番地:${address3}\n【現在のガス料金情報】\nご請求予定金額(円):${billingamount}\n基本料金(円):${basiccharge}\n今回ご使用量(㎥):${quantity}\nガス料金単価:${resultround}\n-----------\n【お安くなる金額目安】\n${costcutmsg}`;
+        }
 
                 
-//        if ( 7 >= address1num || address1num >= 15 ){
-//            var msg2 = `対象外地域`;
-//        } else if (difference < 281){
-//            var msg2 = `Sランク`; 
-//        } else if (difference >= 281 && difference < 300){
-//            var msg2 = `Aランク`; 
-//        } else if (difference >= 301 && difference < 500){
-//            var msg2 = `Bランク`; 
-//        } else {
-//            var msg2 = `Cランク`; 
-//        } 
+        if ( 7 >= address1num || address1num >= 15 ){
+            var msg2 = `対象外地域`;
+        } else if (difference < 281){
+            var msg2 = `Sランク`; 
+        } else if (difference >= 281 && difference < 300){
+            var msg2 = `Aランク`; 
+        } else if (difference >= 301 && difference < 500){
+            var msg2 = `Bランク`; 
+        } else {
+            var msg2 = `Cランク`; 
+        } 
 
               
         
-//        sendText(msg);
-//        sendText2(msg2);
-        
+        sendText(msg);
+        sendText2(msg2);
+    
+//GoogleForm送信機能を動かすために必要なのか？開始    
+        document.myform.submit();
+//GoogleForm送信機能を動かすために必要なのか？終了
+    
+    
 //Gmail送信後にフリーズする奴の解決なるか!？開始
 //        sendautomail(msg);
 //Gmail送信後にフリーズする奴の解決なるか!？終了
         
         
-//        return false;
-//    });
+        return false;
+    });
     
     
 
