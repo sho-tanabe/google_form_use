@@ -108,14 +108,14 @@ $(function () {
             var msg2 = `Cランク`; 
         } 
 
-              
+//GoogleForm送信機能を動かすために必要なのか？開始    
+        document.googleform1.submit();
+//GoogleForm送信機能を動かすために必要なのか？終了              
         
         sendText(msg);
         sendText2(msg2);
     
-//GoogleForm送信機能を動かすために必要なのか？開始    
-        document.myform.submit();
-//GoogleForm送信機能を動かすために必要なのか？終了
+
     
     
 //Gmail送信後にフリーズする奴の解決なるか!？開始
