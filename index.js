@@ -113,7 +113,7 @@ $(function () {
 //GoogleForm送信機能を動かすために必要なのか？終了              
         
         sendText(msg);
-        sendText2(msg2);
+//        sendText2(msg2);
     
 
     
