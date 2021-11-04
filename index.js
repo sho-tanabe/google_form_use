@@ -109,7 +109,7 @@ $(function () {
         } 
 
 //GoogleForm送信機能を動かすために必要なのか？開始    
-        document.googleform1.submit();
+//        document.googleform1.submit();
 //GoogleForm送信機能を動かすために必要なのか？終了              
         
         sendText(msg);
