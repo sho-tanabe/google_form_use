@@ -38,10 +38,22 @@ function initializeLiff(liffId) {
 function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
-//        shareTargetPicker(text);
-        alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
+
+        shareTargetPicker(text);
+
+//GoogleForm送信機能を動かすために必要なのか？開始    
+        document.googleform1.submit();
+//GoogleForm送信機能を動かすために必要なのか？終了 
+
+//        alert('本画面をLINE以外のブラウザで起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
+
+//GoogleForm送信機能を動かすために必要なのか？開始    
+        document.googleform1.submit();
+//GoogleForm送信機能を動かすために必要なのか？終了 
+        
+        
         sendMessages(text);
 //        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。→成功！!数日ごも維持できているか確認する。→3回目フリーズ再発。再度コメントアウト
 //        sendLineNotifyMessage();//実験中。
