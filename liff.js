@@ -51,8 +51,8 @@ function sendText(text) {
         
         sendMessages(text);
         
-        //画面クローズを出来るだけ最後にテスト
-        liff.closeWindow();
+        //画面クローズを出来るだけ最後にテスト///うまくいかなかった
+       // liff.closeWindow();
         //画面クローズを出来るだけ最後にテスト
 
         
