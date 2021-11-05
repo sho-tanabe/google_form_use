@@ -33,9 +33,8 @@ $(function () {
 //            }, false);
 //        })
 //    })();
-    
-    
-////googleformに回答が送信されないため、一次コメントアウト    開始
+    //ブラウザバリデーション　→ 原因不明だがトーク投稿に至らないため、失敗。いったんコメントアウト中。ここが悪いのではなくhtml側の問題かもしれない。。。調査中。    
+
     
     // 送信
     $('form').submit(function () {
@@ -108,28 +107,11 @@ $(function () {
         } else {
             var msg2 = `Cランク`; 
         } 
-
-//GoogleForm送信機能を動かすために必要なのか？開始    
-//        document.googleform1.submit();
-//GoogleForm送信機能を動かすために必要なのか？終了              
-        
+           
         sendText(msg);
 //        sendText2(msg2);
     
-//CloseWindowが動作するか実験。......一瞬で送信後画面が消えてしまう。却下。
-//        closeWin();
-//CloseWindowが動作するか実験。
-    
-
-        
         return false;
     });
-    
-    
-
-    
-////googleformに回答が送信されないため、一次コメントアウト    終了    
-    
-    
     
 });
