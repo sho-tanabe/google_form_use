@@ -60,14 +60,10 @@ function sendText(text) {
         
         
         
-        //画面クローズを出来るだけ最後にテスト///うまくいかなかった
+//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
        // liff.closeWindow();
-        //画面クローズを出来るだけ最後にテスト
-
+//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
         
-//        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。→成功！!数日ごも維持できているか確認する。→3回目フリーズ再発。再度コメントアウト
-//        sendLineNotifyMessage();//実験中。
-//        myFunction();//実験中２。
     }
 }
 
