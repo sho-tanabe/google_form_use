@@ -90,7 +90,13 @@ function sendMessages(text) {
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
     }).then(function () {
         window.alert('テスト中！！診断結果はLINEチャット画面に表示されます。');
-//        liff.closeWindow();
+
+        //タイマー機能を実験するためコメントアウト
+        //        liff.closeWindow();
+        //タイマー機能を実験するためコメントアウト
+        
+        setTimeout(liff.closeWindow,3000);
+        
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
 
     }).catch(function (error) {
