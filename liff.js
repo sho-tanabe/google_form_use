@@ -79,6 +79,7 @@ function sendMessages(text) {
         'type': 'text',
         'text': "見積もり申し込み"
     }]).then(function () {
+        window.alert('診断結果をLINEトークで確認して下さい。');
         liff.closeWindow();
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
