@@ -69,17 +69,14 @@ function sendMessages(text) {
         'text': "見積もり申し込み"
     }]).then(function () {
         document.googleform1.submit();
-
     }).then(function () {
         window.alert('診断結果はLINEチャット画面に表示されます。');
-        
 //GoogleFormを利用しない場合に限り、then文とliff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
     //}).then(function () {    
         //liff.closeWindow();
-//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
-        
+//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。        
     }).catch(function (error) {
-        window.alert('Failed to send message ' + error);
+        window.alert('999Failed to send message ' + error);
     });
 }
 //2通同時に送れるかテスト
