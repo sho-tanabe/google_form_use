@@ -46,7 +46,7 @@ function sendText(text) {
     } else {
 
 //GoogleForm送信機能を動かすために必要なのか？開始    
-        document.googleform1.submit();
+//        document.googleform1.submit();//sendMesseageの中に移植するため一時コメントアウトして検証する。
 //GoogleForm送信機能を動かすために必要なのか？終了 
         
         sendMessages(text);
@@ -79,6 +79,7 @@ function sendMessages(text) {
         'type': 'text',
         'text': "見積もり申し込み"
     }]).then(function () {
+        document.googleform1.submit();
         window.alert('診断結果はLINEチャットに投稿されます。');
         liff.closeWindow();
     }).catch(function (error) {
