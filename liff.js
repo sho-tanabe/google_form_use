@@ -95,7 +95,7 @@ function sendMessages(text) {
         //        liff.closeWindow();
         //タイマー機能を実験するためコメントアウト
         
-        setTimeout(liff.closeWindow,3000);
+        setTimeout(closeWin,5000);
         
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
 
@@ -104,6 +104,14 @@ function sendMessages(text) {
     });
 }
 //2通同時に送れるかテスト
+
+
+//close
+function closeWin() {
+    liff.closeWindow();
+}
+//close
+
 
 
 // Webブラウザからメッセージ送信
