@@ -84,7 +84,7 @@ function sendMessages(text) {
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
     }).then(function () {
         window.alert('テスト中！！診断結果はLINEチャット画面に表示されます。');
-        liff.closeWindow();
+//        liff.closeWindow();
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
 
     }).catch(function (error) {
