@@ -1,5 +1,5 @@
 $(function () {
-    $('form').button(function () {
+    $('form').submit(function () {
         closeWin();
         return false;
     });
