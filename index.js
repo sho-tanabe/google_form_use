@@ -116,17 +116,11 @@ $(function () {
         sendText(msg);
 //        sendText2(msg2);
     
+//CloseWindowが動作するか実験。
+        closeWin();
+//CloseWindowが動作するか実験。
+    
 
-        //30分アクションがないと初回で送信失敗となることの対策。sendText(msg)を2回やるとどうなるか？画面閉じて終わる？？開始
-        //sendText(msg);
-        
-        //30分アクションがないと初回で送信失敗となることの対策。sendText(msg)を2回やるとどうなるか？終了
-    
-    
-//Gmail送信後にフリーズする奴の解決なるか!？開始
-//        sendautomail(msg);
-//Gmail送信後にフリーズする奴の解決なるか!？終了
-        
         
         return false;
     });
