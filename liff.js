@@ -49,7 +49,16 @@ function sendText(text) {
 //        document.googleform1.submit();//sendMesseageの中に移植するため一時コメントアウトして検証する。
 //GoogleForm送信機能を動かすために必要なのか？終了 
         
-        sendMessages(text);
+
+        //sendMessageを5秒後に実施する実験のためコメントアウト
+        //sendMessages(text);
+        setTimeout(sendMessages(text),5000);
+        //sendMessageを5秒後に実施する実験のためコメントアウト
+       
+        
+        
+        
+        
         
         //画面クローズを出来るだけ最後にテスト///うまくいかなかった
        // liff.closeWindow();
