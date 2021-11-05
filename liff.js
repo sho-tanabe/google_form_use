@@ -50,6 +50,12 @@ function sendText(text) {
 //GoogleForm送信機能を動かすために必要なのか？終了 
         
         sendMessages(text);
+        
+        //画面クローズを出来るだけ最後にテスト
+        liff.closeWindow();
+        //画面クローズを出来るだけ最後にテスト
+
+        
 //        sendautomail(text);//これを利用すると画面が3回目以降フリーズする現象に見舞われる。パスワードなどをトークン化して再度テストする。→成功！!数日ごも維持できているか確認する。→3回目フリーズ再発。再度コメントアウト
 //        sendLineNotifyMessage();//実験中。
 //        myFunction();//実験中２。
