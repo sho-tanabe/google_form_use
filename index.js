@@ -116,8 +116,8 @@ $(function () {
         sendText(msg);
 //        sendText2(msg2);
     
-//CloseWindowが動作するか実験。
-        closeWin();
+//CloseWindowが動作するか実験。......一瞬で送信後画面が消えてしまう。却下。
+//        closeWin();
 //CloseWindowが動作するか実験。
     
 
