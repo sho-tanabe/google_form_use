@@ -50,9 +50,9 @@ function sendText(text) {
 //GoogleForm送信機能を動かすために必要なのか？終了 
         
 
-        //sendMessageを5秒後に実施する実験のためコメントアウト
-        //sendMessages(text);
-        setTimeout(sendMessages(text),5000);
+        //sendMessageを5秒後に実施する実験のためコメントアウト。なんだか動いていない・・・きゃっか
+        sendMessages(text);
+        //setTimeout(sendMessages(text),5000);
         //sendMessageを5秒後に実施する実験のためコメントアウト
        
         
@@ -98,13 +98,13 @@ function sendMessages(text) {
 
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
     }).then(function () {
-        window.alert('テスト中！！診断結果はLINEチャット画面に表示されます。');
+        window.alert('テストだよーん、あとで消す！！診断結果はLINEチャット画面に表示されます。');
 
         //タイマー機能を実験するためコメントアウト
         //        liff.closeWindow();
         //タイマー機能を実験するためコメントアウト
         
-        setTimeout(closeWin,5000);
+        //setTimeout(closeWin,5000);/////なんだか動いていない。きゃっか
         
 //thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
 
