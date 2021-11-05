@@ -28,7 +28,6 @@ function initializeLiff(liffId) {
 //    if (!liff.isInClient()) {
 //        shareTargetPicker(text);
 //    } else {
-//        //sendautomail(text);ガス料金単価計算の結果をメール転送するならこちら
 //        sendMessages(text);
 //    }
 //}
@@ -38,32 +37,11 @@ function initializeLiff(liffId) {
 function sendText(text) {
     if (!liff.isInClient()) {
 //WEBブラウザアクセスの場合の動作↓
-
-//        shareTargetPicker(text);
-
+        //shareTargetPicker(text);
         alert('本画面をLINEアプリ以外で起動している場合、料金を診断できません。スマートフォンのLINEアプリから料金診断を行って下さい。');
 //WEBブラウザアクセス以外の場合の動作↑
     } else {
-
-//GoogleForm送信機能を動かすために必要なのか？開始    
-//        document.googleform1.submit();//sendMesseageの中に移植するため一時コメントアウトして検証する。
-//GoogleForm送信機能を動かすために必要なのか？終了 
-        
-
-        //sendMessageを5秒後に実施する実験のためコメントアウト。なんだか動いていない・・・きゃっか
-        sendMessages(text);
-        //setTimeout(sendMessages(text),5000);
-        //sendMessageを5秒後に実施する実験のためコメントアウト
-       
-        
-        
-        
-        
-        
-//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
-       // liff.closeWindow();
-//GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
-        
+        sendMessages(text);        
     }
 }
 
@@ -91,19 +69,12 @@ function sendMessages(text) {
         'text': "見積もり申し込み"
     }]).then(function () {
         document.googleform1.submit();
-
-//thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
     }).then(function () {
-        window.alert('テストだよーん、あとで消す！！診断結果はLINEチャット画面に表示されます。');
 
-        //タイマー機能を実験するためコメントアウト
-        //        liff.closeWindow();
-        //タイマー機能を実験するためコメントアウト
+        //GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
+        //liff.closeWindow();
+        //GoogleFormを利用しない場合に限り、liff.closewindowをここに挟み込むことで画面クローズを動作させることができる。
         
-        //setTimeout(closeWin,5000);/////なんだか動いていない。きゃっか
-        
-//thenを書いて段階的に進むようにテスト中。GoogleFormに記載されない件を検証中。
-
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
@@ -111,11 +82,11 @@ function sendMessages(text) {
 //2通同時に送れるかテスト
 
 
-//close
+//thanks.jsで呼び出しているため削除不可
 function closeWin() {
     liff.closeWindow();
 }
-//close
+//thanks.jsで呼び出しているため削除不可
 
 
 
@@ -126,12 +97,7 @@ function shareTargetPicker(text) {
         'text': text
     }]).catch(function (error) {
         window.alert('Failed to send message ' + error);
-    });
-    
-    //GoogleForm送信機能を動かすために必要なのか？開始    
-    //document.googleform1.submit();
-    //GoogleForm送信機能を動かすために必要なのか？終了 
-    
+    });    
 }
 
 
