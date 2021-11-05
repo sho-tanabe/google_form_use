@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <form name="googleform1" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeI-O2e35yoAbQCAjjHrwjIJAcFAyeB387Nge-7hNUQu8j_qQ/formResponse" method="POST"  enctype="application/x-www-form-urlencoded" id="mG61Hd">
+    <form name="googleform1" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeI-O2e35yoAbQCAjjHrwjIJAcFAyeB387Nge-7hNUQu8j_qQ/formResponse" method="POST"  enctype="application/x-www-form-urlencoded" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
     <!--<<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeI-O2e35yoAbQCAjjHrwjIJAcFAyeB387Nge-7hNUQu8j_qQ/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="POST" id="mG61Hd"> 
     form class="w-75 mx-auto"　novalidate>-->
         <div class="alert alert-warning" role="alert">
@@ -203,6 +203,11 @@
         
         <input type="submit" class="mt-4 btn btn-primary btn-block" value="料金診断結果を見る">
     </form>
+    
+    <!--Thanksページへ遷移-->
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe  name="hidden_iframe"  id="hidden_iframe"  style="display: none"  onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+    <!--Thanksページへ遷移-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
