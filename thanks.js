@@ -1,6 +1,7 @@
 $(function () {
     $('form').submit(function () {
-        closeWin();
+//        closeWin();
+        setTimeout(closeWin, 3000);
         return false;
     });
 });
